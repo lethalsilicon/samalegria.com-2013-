@@ -1,0 +1,537 @@
+/*
+strppd.css by Iain MacDonald(http://iainspad.com/strppd-css/)
+
+Based on the Meyer Reset by MeyerWeb (http://meyerweb.com/eric/tools/css/reset/)
+This is a modified version with additional resetting such as setting certain elements to certain properties, as they should.
+This also carries some resets for HTML5 elements i.e. the ':required' pseudo-selector, as well as resetting for mobile browsers.
+Also included is some typographical styling, just to set them to their respective type styles.
+Finally, there's also form and interactive element styling so forms and navigation elements look clickable.
+
+Be sure to contribute any improvements and changes to this reset as you see fit. Have fun!
+
+v. 1.0
+License: Public Domain
+
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+		font-family: Arial, Helvetica, sans-serif;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display: block;}
+
+/*---Universal Selector to add additional resets, such as text-size adjust and tap highlighting---*/
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {text-decoration: none;}
+
+body {line-height: 1;}
+
+ol, ul {list-style-type: none;}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+
+/*---Removes Webkit form styling on Mobiles---*/
+
+input, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+/*---Additional Form resets---*/
+
+button, input[type="button"] {background: none;}
+
+:required {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+}
+
+/*---Typographic Styling---*/
+
+em, i {font-style: italic;}
+
+strong, b {font-weight: bold;}
+
+u {text-decoration: underline;}
+
+pre, code {font-family: Monaco, Courier, monospace;}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+blockquote, q {quotes: "" "";}
+
+blockquote:before, blockquote:after, q:before,  q:after, {content: "";}
+
+/*---Interactive Element Settings---*/
+
+a, input[type="submit"], input[type="button"], button, label[for] {cursor: pointer;}
+
+/*---Misc. Element Styling---*/
+
+img {-ms-interpolation-mode: bicubic;}
+
+/* End strppd.css */
+
+/* Custom fonts */
+@font-face {
+    font-family: 'ModernPictogramsNormal';
+    src: url('../fonts/modernpictograms/modernpics-webfont.eot');
+    src: url('../fonts/modernpictograms/modernpics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/modernpictograms/modernpics-webfont.woff') format('woff'),
+         url('../fonts/modernpictograms/modernpics-webfont.ttf') format('truetype'),
+         url('../fonts/modernpictograms/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
+    font-weight: normal;
+    font-style: normal; }
+
+/* Proper box model */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* General styles */
+::-moz-selection {  }
+::selection {  }
+
+a{  
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+		color: #e97b0c; /*orange*/
+}
+
+a:hover{ color: #006d8d; /*teal*/ }
+a:active{ color: #006d8d; /*teal*/ }
+a:visited{  }
+
+address{  }
+
+aside{  }
+
+b, strong{  }
+
+body{
+	background: #e7e5ea; /*light*/
+	/*background: #8e716b; /*dark*/
+}
+
+blockquote{  }
+
+button{ cursor: pointer; }
+button:hover{  }
+button:active{  }
+
+caption, th, td{ vertical-align: middle; }
+
+h1{font-weight: bold;}
+h2{  }
+h3{  }
+h4{  }
+h5{  }
+h6{  }
+
+i, em{  }
+
+img{ /*-webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;*/
+		max-width: 100%;
+}
+
+input, select, textarea{  }
+
+input[type=radio]{  }
+input[type=checkbox]{  }
+
+label{  }
+
+li{  }
+
+p{ margin:0 0 0 0; }
+
+select{  }
+select option{  }
+
+table{ border: 0; border-spacing:0; empty-cells:show; }
+
+textarea{ resize: none; }
+
+ul, ol{  }
+
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+/* Custom styles */
+aside, div, dl, fieldset, footer, form, header, iframe, nav, ul, ol, section, table{ width: 100%; }
+#wrap, footer{
+	width: 1040px;
+	margin: auto;
+}/************HEADER**************/
+header{
+    background: #006d8d; /*teal*/
+		color: #e7e5ea; /*white*/
+		margin: auto;
+		width: 1020px;
+}
+header h1 a{
+	float: left;
+	font-size: 36px;
+	height: 100px;
+	width: 20%;
+	margin: 2% 3% 0 2%;
+	color: white;
+	background:url(img/logo.png) no-repeat;
+}
+header .blurb{
+	float: left;
+	width: 20%;
+	font-size: 12px;
+	margin: 3% 0 2% 0;
+	line-height: 1.2;
+}
+header .blurb p{
+margin-bottom: 10px;
+}
+header .contact{
+	float:right;
+	display: block;
+	color: white;
+	width: 200px;
+	height: 100px;
+	margin: 1% .5% 0 0;
+	background: #edb100; /*yellow*/
+	background: url(img/contact.png) no-repeat;
+}
+header .contact:hover, header .active{
+	background: url(img/contact.gif) no-repeat;
+}
+nav{
+	background: #e97b0c; /*orange*/
+	margin-bottom: 20px;
+	/*-moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         0px 3px 2px 2px #ccc; /*x, y, blur, spread, color*/
+}
+nav li a{
+	display: block;
+	padding: 10px 8px 10px 8px;
+	float: left;
+	text-align: center;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #fff;
+}
+nav li a:hover, nav li a:active{
+	background: #006d8d; /*teal*/
+	color: #edb100; /*yellow*/
+}
+nav li a.selected{
+	color: #e97b0c; /*orange*/
+	background: #fff;
+	font-weight: bold;
+}
+#wrap{
+}
+/***********CONTENT***********/
+#content{
+	min-height: 800px;
+}
+section{
+
+}
+.grid{
+	background: pink;
+}
+.grid a{
+	float: left;
+	padding: 15px;
+	background: white;
+	margin: 0 10px 20px 10px;
+}
+.grid a:hover, .grid a:active{
+	background: #edb100; /*yellow*/
+}
+.grid a:hover>h2, .grid a:hover>p, .grid a:active>h2, .grid a:active>p{
+	color: white;
+}
+.grid a:hover>img{
+	/*opacity: .5;*/
+}
+.grid h2{
+	text-align: center;
+	color: #e97b0c; /*orange*/
+	font-weight: bold;
+	padding-bottom: 2px;
+}
+.grid p{
+	text-align: center;
+	color: #006d8d; /*teal*/
+	padding-bottom: 7px;
+	font-size: 12px;
+}
+.grid img{
+	width: 210px;
+	height: 160px;
+}
+.project_page, .contact_page{
+	background: white;
+	width: 1020px;
+	min-height: 800px;
+	padding: 30px;
+	margin: 0 auto 20px auto;
+	border-top: 30px solid #e97b0c; /*orange*/
+}
+.project_page .left_side, .contact_page .left_side{
+	float:left;
+	width: 500px;
+	margin: 0 30px 0 0;
+}
+.project_page .right_side, .contact_page .right_side{
+	float:right;
+	width: 430px;
+}
+.project_page h2, .contact_page h2{
+	color: #e97b0c; /*orange*/
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.project_page h3, .contact_page h3{
+	color: #006d8d; /*teal*/
+	margin-bottom: 20px;
+}
+.project_page p, .contact_page p{
+	color: #8e716b; /*dark*/
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1.1;
+}
+.project_page img, .contact_page img, iframe{
+	margin-bottom: 30px;
+}
+.right_side .challenge, .right_side .solution{
+	font-weight: bold;
+}
+.right_side .category{
+	font-size: 12px;
+	color: #006d8d; /*teal*/
+}
+.right_side .category span{
+	color: #8e716b; /*dark*/
+	font-style: italic;
+}
+.right_side .launch{
+	padding: 5px;
+	display: block;
+	background: #006d8d; /*teal*/
+	color: #fff;
+	text-align: center;
+}
+.right_side .launch:hover, .right_side .launch:active{
+	background: #e97b0c; /*orange*/
+}
+.navigator{
+	font-size: 10px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.navigator .prev_next{
+	float: left;
+	width: 50%;
+}
+.navigator .portfolio{
+	float: right;	
+}
+.contact_page .social_media{
+	clear: both;
+}
+.social_media a{
+	display: block;
+	height: 100px;
+	width: 100px;
+	background: red;
+	float: left;
+	margin: 0 10px 10px 0;
+	-webkit-transition: all 0;
+    -moz-transition: all 0;
+    transition: all 0;
+}
+
+.social_media a.linkedin{background: url(img/social_media_sprites.png) 0 0;}
+.social_media a.linkedin:hover, .social_media a.linkedin:active{background: url(img/social_media_sprites.png) 0 -100px;}
+.social_media a.google{background: url(img/social_media_sprites.png) -100px 0;}
+.social_media a.google:hover, .social_media a.google:active{background: url(img/social_media_sprites.png) -100px -100px;}
+.social_media a.dribbble{background: url(img/social_media_sprites.png) -200px 0;}
+.social_media a.dribbble:hover, .social_media a.dribbble:active{background: url(img/social_media_sprites.png) -200px -100px;}
+.social_media a.twitter{background: url(img/social_media_sprites.png) -300px 0;}
+.social_media a.twitter:hover, .social_media a.twitter:active{background: url(img/social_media_sprites.png) -300px -100px;}
+.social_media a.pinterest{background: url(img/social_media_sprites.png) -400px 0;}
+.social_media a.pinterest:hover, .social_media a.pinterest:active{background: url(img/social_media_sprites.png) -400px -100px;}
+.social_media a.amazon{background: url(img/social_media_sprites.png) -500px 0;}
+.social_media a.amazon:hover, .social_media a.amazon:active{background: url(img/social_media_sprites.png) -500px -100px;}
+.social_media a.resume{background: url(img/social_media_sprites.png) -600px 0;}
+.social_media a.resume:hover, .social_media a.resume:active{background: url(img/social_media_sprites.png) -600px -100px;}
+.social_media a.email{background: url(img/social_media_sprites.png) -700px 0;}
+.social_media a.email:hover, .social_media a.email:active{background: url(img/social_media_sprites.png) -700px -100px;}
+
+
+footer{
+	width: 1020px;
+	height: 10px;
+	display: block;
+	background: #8e716b; /*dark*/
+	margin-bottom: 20px;
+}
+/* ================================================================== */
+/* === Responsive styles ============================================ */
+/* ================================================================== */
+
+/* Smartphones */
+@media only screen and (max-width: 519px) {
+	header, #wrap, footer, .project_page, .contact_page{
+		width: 100%;
+	}
+	.grid img{
+		max-width: 100%;
+		height: auto;
+		width: 480px;
+	}
+	.contact_page .left_side, .project_page .left_side, .contact_page .right_side, .project_page .right_side{
+		width: 100%;
+	}
+	.contact_page .left_side img, .project_page .left_side img{
+		width: 720px;
+	}
+	nav li a{
+		width: 50%%;
+	}
+	header h1 a{
+		width: 100%;
+		background:url(img/logo.png) no-repeat center center;
+	}
+	header .blurb{
+		float: right;
+		width: 35%;
+		display: none;
+	}
+	header .contact{
+		clear: both;
+	}
+}
+
+/* Large smartphones */
+@media only screen and (min-width: 520px) and (max-width: 779px) {
+	header, #wrap, footer{
+		width: 100%;
+	}
+	#content{
+		width: 520px;
+		margin: auto;
+	}
+	#content.project_page, #content.contact_page{
+		width: 100%;
+	}
+	.contact_page .left_side, .project_page .left_side, .contact_page .right_side, .project_page .right_side{
+		width: 100%;
+	}
+	.contact_page .left_side img, .project_page .left_side img{
+		width: 720px;
+	}
+	nav li a{
+		width: 50%;
+	}
+	header h1 a{
+		width: 39%;
+		margin-right: 3%;
+	}
+	header .blurb{
+		width: 35%;
+	}
+}
+/* Tablets and landscape large smartphones */
+@media only screen and (min-width: 780px) and (max-width: 1000px) {
+	header, footer, .project_page, .contact_page{
+		width: 760px;
+	}
+	#wrap{
+		width: 780px;
+	}
+	.contact_page .left_side, .project_page .left_side{
+		width: 55%;
+		margin-right: 2%;
+	}
+	.contact_page .right_side, .project_page .right_side{
+		width: 43%;
+	}
+	nav li a{
+		width: 25%;
+	}
+	header h1 a{
+		width: 30%%;
+		margin-right: 1%;
+	}
+}
+
+/* Desktop screens */
+@media only screen and (min-width: 1200px) and (max-width: 1499px){
+}
+
+/* Large screen */
+@media only screen and (min-width: 1500px) and (max-width: 1799px){
+}
+
+/* Very large screen */
+@media only screen and (min-width: 1800px){
+}
